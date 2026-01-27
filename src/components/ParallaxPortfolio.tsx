@@ -166,10 +166,10 @@ const AboutSection = () => (
                 <SectionTitle subtitle="Introduction">The Architect.</SectionTitle>
                 <div className="space-y-8">
                     <p className="text-3xl text-zinc-200 font-light leading-snug">
-                        Building <span className="text-white font-bold border-b-2 border-purple-500">powerful apps</span> with a <span className="text-white font-bold border-b-2 border-blue-500">clean design</span>.
+                        Building <span className="text-white font-bold border-b-2 border-purple-500">powerful Website</span> with a <span className="text-white font-bold border-b-2 border-blue-500">clean design</span>.
                     </p>
                     <p className="text-xl text-zinc-400 font-light leading-relaxed">
-                        I'm a WordPress Developer at <span className="text-white font-medium">SVR GLOBAL SOLUTIONS INDIA</span> specializing in Full-stack <span className="text-purple-400">Next.js</span> development. I enjoy building everything from user interfaces to backend systems.
+                        I'm a WordPress & Full-stack Developer at <span className="text-white font-medium">SVR GLOBAL SOLUTIONS INDIA</span>. With a background in <span className="text-blue-400">B.Tech CSE</span>, I specialize in building high-performance systems and modern user experiences using <span className="text-purple-400">Next.js</span>.
                     </p>
                 </div>
 
@@ -192,15 +192,15 @@ const AboutSection = () => (
 
 const SkillsSection = () => {
     const categories = [
-        { title: "Core", skills: ["Next.js", "React.js", "TailwindCSS", "Framer Motion", "Three.js"], color: "from-purple-500 to-indigo-600" },
-        { title: "Engine", skills: ["Python", "Django", "PHP", "MySQL", "REST APIs"], color: "from-blue-500 to-cyan-500" },
-        { title: "Data", skills: ["Data Analytics", "Data Mining", "OCR Systems", "AI/ML"], color: "from-pink-500 to-rose-500" }
+        { title: "Frontend", skills: ["Next.js", "React.js", "HTML", "CSS", "Javascript", "TailwindCSS"], color: "from-purple-500 to-indigo-600" },
+        { title: "Backend", skills: ["Python", "PHP", "MySQL", "REST & GraphQL APIs", "PostgreSQL"], color: "from-blue-500 to-cyan-500" },
+        { title: "Tools", skills: ["Git", "GitHub", "VS Code", "Postman", "Browser DevTools (Chrome / Edge DevTools)"], color: "from-pink-500 to-rose-500" }
     ];
 
     return (
         <section id="skills" className="w-full min-h-screen py-32 px-10 md:px-20 relative">
             <div className="max-w-7xl mx-auto">
-                <SectionTitle subtitle="Capabilities">Power Grid.</SectionTitle>
+                <SectionTitle subtitle="Expertise">Technical Stack.</SectionTitle>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
                     {categories.map((cat, i) => (
                         <motion.div
@@ -239,7 +239,7 @@ const ExperienceSection = () => {
             company: "WORKCOHOL",
             role: "WordPress Developer Intern",
             period: "JAN 2025 - MAR 2025",
-            desc: "Architecting high-performance web applications using the Python/Django/React stack. Improving core metrics and shipping production-ready code in an agile loop."
+            desc: "Architecting high-performance web applications using the Python/React stack. Improving core metrics and shipping production-ready code in an agile loop."
         }
     ];
 
@@ -273,40 +273,59 @@ const ExperienceSection = () => {
 const ProjectsSection = () => {
     const projects = [
         {
+            title: "African Valve",
+            desc: "Full-stack E-commerce platform. Built the Next.js frontend and integrated it with a WordPress backend using GraphQL.",
+            tech: ["Next.js", "GraphQL", "WordPress"],
+            color: "from-blue-600 to-indigo-600",
+            link: "https://www.africanvalve.com/shop/"
+        },
+        {
+            title: "Speciality Valves",
+            desc: "Improved the design and backend logic using CSS and PHP to enhance a large-scale industrial site.",
+            tech: ["PHP", "CSS", "WordPress"],
+            color: "from-purple-600 to-blue-600"
+        },
+        {
+            title: "Valves Only",
+            desc: "Developed a custom industrial platform focused on specialized valve supply and distribution.",
+            tech: ["WordPress", "PHP", "UI/UX"],
+            color: "from-zinc-800 to-zinc-950"
+        },
+        {
+            title: "UAE Valve",
+            desc: "Built a high-performance regional platform specifically for the Middle Eastern industrial market.",
+            tech: ["WordPress", "SEO", "Performance"],
+            color: "from-red-600 to-orange-600"
+        },
+        {
             title: "Auto OCR",
-            desc: "Computer Vision platform for automated license plate recognition using OpenCV and Tesseract OCR.",
+            desc: "An AI system that automatically reads license plates using Python and Computer Vision.",
             tech: ["Python", "OpenCV", "AI"],
-            color: "from-blue-600 to-cyan-500"
+            color: "from-cyan-600 to-blue-500"
         },
         {
             title: "Traffic AI",
-            desc: "Gesture recognition system utilizing MoveNet and Random Forest for autonomous vehicle interaction.",
+            desc: "A gesture recognition system that helps autonomous vehicles react to human hand signals.",
             tech: ["TensorFlow", "MediaPipe"],
             color: "from-purple-600 to-pink-600"
-        },
-        {
-            title: "Industrial B2B",
-            desc: "Enterprise-grade industrial valve platform built with Next.js, GraphQL, and high-performance headless architectures.",
-            tech: ["Next.js", "GraphQL"],
-            color: "from-zinc-100 to-zinc-400",
-            dark: true
         }
     ];
 
     return (
         <section id="projects" className="section-padding">
             <div className="max-w-7xl mx-auto">
-                <SectionTitle subtitle="Showcase">Latest Creations.</SectionTitle>
+                <SectionTitle subtitle="Showcase">Recent Work.</SectionTitle>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
                     {projects.map((proj, i) => (
                         <motion.div
                             key={proj.title}
                             whileHover={{ y: -20 }}
-                            className="group glass-dark rounded-[3.5rem] overflow-hidden border border-white/5 relative"
+                            className="group glass-dark rounded-[3.5rem] overflow-hidden border border-white/5 relative cursor-pointer"
+                            onClick={() => proj.link && window.open(proj.link, '_blank')}
                         >
                             <div className={`h-64 bg-gradient-to-br ${proj.color} p-12 flex flex-col justify-end relative overflow-hidden`}>
                                 <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
-                                <h4 className={`text-4xl font-black ${proj.dark ? 'text-black' : 'text-white'} tracking-tighter uppercase relative z-10`}>{proj.title}</h4>
+                                <h4 className="text-4xl font-black text-white tracking-tighter uppercase relative z-10">{proj.title}</h4>
                             </div>
                             <div className="p-10 space-y-6">
                                 <p className="text-zinc-400 font-light leading-relaxed">{proj.desc}</p>
@@ -315,6 +334,11 @@ const ProjectsSection = () => {
                                         <span key={t} className="px-3 py-1 glass text-[10px] font-mono text-zinc-300 rounded-lg">{t}</span>
                                     ))}
                                 </div>
+                                {proj.link && (
+                                    <div className="pt-2">
+                                        <span className="text-white text-xs font-mono uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-colors">Visit Project →</span>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}
