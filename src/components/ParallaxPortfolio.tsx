@@ -154,7 +154,7 @@ const AboutSection = () => (
                     src="/profile.png"
                     alt="Samjebas"
                     fill
-                    className="object-cover transition-all duration-1000 scale-105 group-hover:scale-110"
+                    className="object-cover object-top transition-all duration-1000 scale-100 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/20" />
                 <div className="absolute bottom-10 left-10 p-8 glass rounded-2xl backdrop-blur-2xl">
