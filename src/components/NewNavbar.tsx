@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function NewNavbar() {
+export default function NewNavbar({ onContactClick }: { onContactClick?: () => void }) {
     const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
 
     return (
@@ -33,6 +33,7 @@ export default function NewNavbar() {
 
                 <div className="flex items-center gap-4">
                     <motion.button
+                        onClick={onContactClick}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-6 py-2 bg-white text-black text-xs font-black uppercase tracking-tighter rounded-xl hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]"
