@@ -12,30 +12,30 @@ import NewNavbar from './NewNavbar';
 /*                                COMPONENTS                                  */
 /* -------------------------------------------------------------------------- */
 
-const SectionTitle = ({ children, subtitle, headingSize = "text-6xl md:text-8xl" }: { children: React.ReactNode, subtitle?: string, headingSize?: string }) => (
+const SectionTitle = ({ children, subtitle, headingSize = "text-4xl sm:text-5xl md:text-7xl lg:text-8xl" }: { children: React.ReactNode, subtitle?: string, headingSize?: string }) => (
     <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16 relative"
+        className="mb-10 md:mb-16 relative"
     >
         {subtitle && (
             <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="text-purple-500 font-mono text-xs uppercase tracking-[0.5em] mb-4"
+                className="text-purple-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] md:tracking-[0.5em] mb-3 md:mb-4 leading-none"
             >
                 {subtitle}
             </motion.p>
         )}
-        <h2 className={`${headingSize} font-black text-white tracking-tighter leading-none mb-6`}>
+        <h2 className={`${headingSize} font-black text-white tracking-tighter leading-[1.1] md:leading-[0.95] mb-6`}>
             {children}
         </h2>
         <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: '100px' }}
+            whileInView={{ width: '80px' }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
+            className="h-1.5 md:h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
         />
     </motion.div>
 );
@@ -46,46 +46,46 @@ const HeroSection = () => {
     const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
     return (
-        <section id="home" className="w-full h-screen flex flex-col justify-center items-start p-10 md:p-20 relative overflow-hidden">
+        <section id="home" className="w-full min-h-screen flex flex-col justify-center items-start p-6 sm:p-12 md:p-20 relative overflow-hidden">
             <motion.div
                 style={{ y: y1, opacity }}
-                initial={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                className="z-10"
+                className="z-10 w-full"
             >
                 <div className="relative">
                     <motion.span
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.1 }}
-                        className="absolute -top-10 -left-10 text-[8rem] md:text-[15rem] font-black text-white pointer-events-none select-none"
+                        animate={{ opacity: 0.05 }}
+                        className="absolute -top-8 md:-top-12 -left-4 md:-left-8 text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] font-black text-white pointer-events-none select-none whitespace-nowrap"
                     >
                         SAMJEBAS
                     </motion.span>
-                    <h1 className="text-7xl md:text-[11rem] font-black gradient-text tracking-tighter leading-[0.8] relative z-10 drop-shadow-2xl">
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-black gradient-text tracking-tighter leading-[0.85] md:leading-[0.8] relative z-10 drop-shadow-2xl pr-4">
                         SAMJEBAS<br />JESWIN K
                     </h1>
                 </div>
 
-                <div className="mt-12 space-y-4">
-                    <h2 className="text-4xl md:text-6xl font-extralight text-white tracking-[0.3em] opacity-80 uppercase">
-                        WordPress & Full-stack Developer
+                <div className="mt-8 md:mt-12 space-y-4">
+                    <h2 className="text-2xl sm:text-4xl md:text-6xl font-extralight text-white tracking-[0.1em] md:tracking-[0.3em] opacity-80 uppercase leading-tight">
+                        WordPress &<br className="sm:hidden" /> Full-stack Developer
                     </h2>
-                    <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl font-light leading-relaxed">
-                        Crafting digital universes with <span className="text-purple-400 font-medium">Next.js</span>,
-                        architecting backends with <span className="text-blue-400 font-medium">Python</span>,
-                        and exploring the frontier of <span className="text-pink-400 font-medium">AI & Computer Vision</span>.
+                    <p className="text-lg md:text-2xl text-zinc-400 max-w-2xl font-light leading-relaxed">
+                        Crafting digital universes with <span className="text-purple-400 font-medium whitespace-nowrap">Next.js</span>,
+                        architecting backends with <span className="text-blue-400 font-medium whitespace-nowrap">Python</span>,
+                        and exploring <span className="text-pink-400 font-medium whitespace-nowrap">AI & Computer Vision</span>.
                     </p>
                 </div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="mt-16 flex gap-8 items-center"
+                    className="mt-12 md:mt-16 flex gap-6 md:gap-8 items-center"
                 >
-                    <div className="w-12 h-[1px] bg-zinc-700" />
-                    <span className="text-zinc-500 font-mono text-sm tracking-widest uppercase animate-pulse">Scroll to explore</span>
+                    <div className="w-8 md:w-12 h-[1px] bg-zinc-700" />
+                    <span className="text-zinc-500 font-mono text-xs md:text-sm tracking-widest uppercase animate-pulse leading-none">Scroll to explore</span>
                 </motion.div>
             </motion.div>
         </section>
@@ -93,17 +93,17 @@ const HeroSection = () => {
 };
 
 const VibeSection = () => (
-    <section className="w-full min-h-screen py-32 px-10 md:px-20 relative">
+    <section className="w-full min-h-screen py-20 md:py-32 px-6 sm:px-12 md:px-20 relative">
         <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    className="relative group"
+                    className="relative group order-2 lg:order-1"
                 >
-                    <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-[3rem] blur-3xl group-hover:from-purple-600/40 group-hover:to-blue-600/40 transition-all duration-700" />
-                    <div className="relative glass-dark rounded-[3rem] p-1 overflow-hidden">
-                        <div className="relative aspect-video rounded-[2.8rem] overflow-hidden">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-[2rem] md:rounded-[3rem] blur-3xl group-hover:from-purple-600/40 group-hover:to-blue-600/40 transition-all duration-700" />
+                    <div className="relative glass-dark rounded-[2rem] md:rounded-[3rem] p-1 overflow-hidden">
+                        <div className="relative aspect-video rounded-[1.8rem] md:rounded-[2.8rem] overflow-hidden">
                             <Image
                                 src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop"
                                 alt="Coding session"
@@ -115,25 +115,25 @@ const VibeSection = () => (
                     </div>
                 </motion.div>
 
-                <div className="space-y-10">
-                    <SectionTitle subtitle="Current Focus">Next.js Development.</SectionTitle>
+                <div className="space-y-8 md:space-y-10 order-1 lg:order-2">
+                    <SectionTitle subtitle="Current Focus" headingSize="text-4xl md:text-6xl">Next.js Development.</SectionTitle>
                     <div className="space-y-6">
-                        <p className="text-3xl font-light text-zinc-100 leading-tight">
+                        <p className="text-2xl md:text-3xl font-light text-zinc-100 leading-tight">
                             "Currently deep in <span className="text-purple-500 font-bold">Next.js</span> for my upcoming <span className="text-blue-500 font-bold">Premium E-commerce</span> platform."
                         </p>
-                        <p className="text-lg text-zinc-400 font-light leading-relaxed">
+                        <p className="text-base md:text-lg text-zinc-400 font-light leading-relaxed">
                             I'm revolutionizing how we think about online shopping by blending artificial intelligence with immersive 3D interfaces. No more boring grids—we're talking about a fluid, cinematic shopping experience that reacts to your vibe.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="glass p-6 rounded-2xl">
-                            <span className="text-purple-500 font-bold text-3xl mb-2 block">AI</span>
-                            <p className="text-sm text-zinc-500 font-mono uppercase tracking-widest">Personalized Recommendations</p>
+                            <span className="text-purple-500 font-bold text-2xl md:text-3xl mb-1 md:mb-2 block leading-none">AI</span>
+                            <p className="text-[10px] md:text-sm text-zinc-500 font-mono uppercase tracking-widest leading-tight">Personalized Recommendations</p>
                         </div>
                         <div className="glass p-6 rounded-2xl">
-                            <span className="text-blue-500 font-bold text-3xl mb-2 block">3D</span>
-                            <p className="text-sm text-zinc-500 font-mono uppercase tracking-widest">Interactive Product Showcase</p>
+                            <span className="text-blue-500 font-bold text-2xl md:text-3xl mb-1 md:mb-2 block leading-none">3D</span>
+                            <p className="text-[10px] md:text-sm text-zinc-500 font-mono uppercase tracking-widest leading-tight">Interactive Product Showcase</p>
                         </div>
                     </div>
                 </div>
@@ -143,25 +143,25 @@ const VibeSection = () => (
 );
 
 const AboutSection = () => (
-    <section id="about" className="w-full min-h-screen py-32 px-10 md:px-20 bg-zinc-950/20">
-        <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section id="about" className="w-full min-h-screen py-20 md:py-32 px-6 sm:px-12 md:px-20 bg-zinc-950/20 flex items-center">
+        <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
             <motion.div
-                initial={{ opacity: 0, rotate: -5 }}
+                initial={{ opacity: 0, rotate: -3 }}
                 whileInView={{ opacity: 1, rotate: 0 }}
-                className="relative aspect-[4/5] rounded-[3rem] overflow-hidden glass group shadow-2xl"
+                className="relative aspect-[4/5] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden glass group shadow-2xl"
             >
                 <Image
                     src="/profile.png"
                     alt="Samjebas"
                     fill
-                    className="object-cover object-top transition-all duration-1000 scale-100 group-hover:scale-110"
+                    className="object-cover object-top transition-all duration-1000 scale-100 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/20" />
-                <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 p-8 glass rounded-[2rem] backdrop-blur-3xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] group-hover:border-purple-500/30 transition-all duration-700">
+                <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 p-5 md:p-8 glass rounded-[1.5rem] md:rounded-[2rem] backdrop-blur-3xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] group-hover:border-purple-500/30 transition-all duration-700">
                     <div className="relative">
                         <div className="absolute -top-10 -left-6 w-16 h-16 bg-purple-600/10 blur-3xl rounded-full" />
                         <div>
-                            <h3 className="text-white font-black text-2xl md:text-3xl tracking-tighter leading-[0.9]">
+                            <h3 className="text-white font-black text-xl sm:text-2xl md:text-3xl tracking-tighter leading-[0.9]">
                                 THE<br />
                                 <span className="gradient-text">  FULL-STACK MIND.</span>
                             </h3>
@@ -170,27 +170,27 @@ const AboutSection = () => (
                 </div>
             </motion.div>
 
-            <div className="space-y-12">
-                <SectionTitle subtitle="Introduction" headingSize="text-4xl md:text-6xl">The<br />Digital Architect.</SectionTitle>
-                <div className="space-y-8">
-                    <p className="text-3xl text-zinc-200 font-light leading-snug">
+            <div className="space-y-8 md:space-y-12">
+                <SectionTitle subtitle="Introduction" headingSize="text-3xl sm:text-4xl md:text-6xl">The<br />Digital Architect.</SectionTitle>
+                <div className="space-y-6 md:space-y-8">
+                    <p className="text-2xl md:text-3xl text-zinc-200 font-light leading-snug">
                         Building <span className="text-white font-bold border-b-2 border-purple-500">powerful Website</span> with a <span className="text-white font-bold border-b-2 border-blue-500">clean design</span>.
                     </p>
-                    <p className="text-xl text-zinc-400 font-light leading-relaxed">
+                    <p className="text-base md:text-lg text-zinc-400 font-light leading-relaxed">
                         I'm a WordPress & Full-stack Developer at <span className="text-white font-medium">SVR GLOBAL SOLUTIONS INDIA</span>. With a background in <span className="text-blue-400">B.Tech CSE</span>, I specialize in building high-performance systems and modern user experiences using <span className="text-purple-400">Next.js</span>.
                     </p>
                 </div>
 
-                <div className="flex gap-6">
-                    <div className="px-10 py-6 glass rounded-3xl group hover:border-purple-500/50 transition-all">
-                        <p className="text-slate-500 text-xs font-mono uppercase mb-2">Experience</p>
-                        <p className="text-white font-black text-4xl group-hover:translate-x-2 transition-transform">1<span className="text-purple-500 text-2xl">+</span></p>
-                        <p className="text-slate-400 text-sm">Year Experience</p>
+                <div className="grid grid-cols-2 gap-4 md:gap-6">
+                    <div className="p-6 md:px-10 md:py-8 glass rounded-3xl group hover:border-purple-500/50 transition-all">
+                        <p className="text-zinc-500 text-[10px] font-mono uppercase mb-2">Experience</p>
+                        <p className="text-white font-black text-2xl md:text-4xl group-hover:translate-x-2 transition-transform">1<span className="text-purple-500 text-xl md:text-2xl">+</span></p>
+                        <p className="text-zinc-400 text-xs md:text-sm">Year Experience</p>
                     </div>
-                    <div className="px-10 py-6 glass rounded-3xl group hover:border-blue-500/50 transition-all">
-                        <p className="text-slate-500 text-xs font-mono uppercase mb-2">Projects</p>
-                        <p className="text-white font-black text-4xl group-hover:translate-x-2 transition-transform">7<span className="text-blue-500 text-2xl">+</span></p>
-                        <p className="text-slate-400 text-sm">Deployed</p>
+                    <div className="p-6 md:px-10 md:py-8 glass rounded-3xl group hover:border-blue-500/50 transition-all">
+                        <p className="text-zinc-500 text-[10px] font-mono uppercase mb-2">Projects</p>
+                        <p className="text-white font-black text-2xl md:text-4xl group-hover:translate-x-2 transition-transform">7<span className="text-blue-500 text-xl md:text-2xl">+</span></p>
+                        <p className="text-zinc-400 text-xs md:text-sm">Deployed</p>
                     </div>
                 </div>
             </div>
@@ -207,23 +207,23 @@ const SkillsSection = () => {
     ];
 
     return (
-        <section id="skills" className="w-full min-h-screen py-32 px-10 md:px-20 relative">
+        <section id="skills" className="w-full min-h-screen py-20 md:py-32 px-6 sm:px-12 md:px-20 relative">
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="Expertise">Technical Stack.</SectionTitle>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 mt-16 md:mt-20">
                     {categories.map((cat, i) => (
                         <motion.div
                             key={cat.title}
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.2 }}
-                            className="group p-10 glass-dark rounded-[3rem] hover:ring-2 ring-purple-500/20 transition-all relative overflow-hidden h-full"
+                            transition={{ delay: i * 0.1 }}
+                            className="group p-8 md:p-10 glass-dark rounded-[2.5rem] md:rounded-[3rem] hover:ring-2 ring-purple-500/20 transition-all relative overflow-hidden h-full"
                         >
                             <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${cat.color} blur-[100px] opacity-20 group-hover:opacity-40 transition-opacity`} />
-                            <h3 className="text-4xl font-black text-white mb-10 tracking-tight">{cat.title}</h3>
-                            <div className="flex flex-wrap gap-4">
+                            <h3 className="text-3xl md:text-4xl font-black text-white mb-8 md:mb-10 tracking-tight">{cat.title}</h3>
+                            <div className="flex flex-wrap gap-3 md:gap-4">
                                 {cat.skills.map(skill => (
-                                    <span key={skill} className="px-5 py-3 glass rounded-2xl text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors">
+                                    <span key={skill} className="px-4 py-2 md:px-5 md:py-3 glass rounded-xl md:rounded-2xl text-zinc-300 text-xs md:text-sm font-medium hover:bg-white/10 transition-colors">
                                         {skill}
                                     </span>
                                 ))}
@@ -259,24 +259,24 @@ const ExperienceSection = () => {
     ];
 
     return (
-        <section id="experience" className="w-full min-h-screen py-32 px-10 md:px-20">
+        <section id="experience" className="w-full min-h-screen py-20 md:py-32 px-6 sm:px-12 md:px-20">
             <div className="max-w-5xl mx-auto">
                 <SectionTitle subtitle="Journey">Experience.</SectionTitle>
-                <div className="space-y-16 mt-20">
+                <div className="space-y-12 md:space-y-16 mt-16 md:mt-20">
                     {experiences.map((exp, i) => (
                         <motion.div
                             key={exp.company}
-                            initial={{ opacity: 0, x: -50 }}
+                            initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="relative pl-16 group"
+                            className="relative pl-10 md:pl-16 group"
                         >
                             <div className="absolute left-0 top-0 w-1 h-full bg-zinc-800 rounded-full group-hover:bg-purple-600 transition-colors" />
                             <div className="absolute left-[-8px] top-0 w-5 h-5 rounded-full bg-zinc-950 border-4 border-zinc-800 group-hover:border-purple-600 transition-colors" />
 
-                            <p className="text-purple-500 font-mono text-xs tracking-[0.3em] mb-4">{exp.period}</p>
-                            <h3 className="text-4xl font-bold text-white mb-2">{exp.role}</h3>
-                            <p className="text-2xl text-zinc-500 mb-8">{exp.company}</p>
-                            <p className="text-xl text-zinc-400 font-light leading-relaxed max-w-3xl">{exp.desc}</p>
+                            <p className="text-purple-500 font-mono text-[10px] md:text-xs tracking-[0.3em] mb-3 md:mb-4">{exp.period}</p>
+                            <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{exp.role}</h3>
+                            <p className="text-lg md:text-2xl text-zinc-500 mb-6 md:mb-8">{exp.company}</p>
+                            <p className="text-base md:text-xl text-zinc-400 font-light leading-relaxed max-w-3xl">{exp.desc}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -316,44 +316,44 @@ const ProjectsSection = () => {
         },
         {
             title: "ANPR Traffic Intelligence",
-            desc: "An advanced license plate recognition system utilizing Computer Vision and Tesseract for real-time data retrieval. Developed as a College Mini Project.",
+            desc: "An advanced license plate recognition system utilizing Computer Vision and Tesseract for real-time data retrieval.",
             tech: ["Python", "OpenCV", "Tesseract", "Pandas"],
             color: "from-emerald-600 to-teal-500"
         },
         {
             title: "Autonomous Signal Gesture Recognition",
-            desc: "A deep learning-powered gesture recognition system for autonomous vehicle interaction. Developed as a Final Year Project using TensorFlow.",
+            desc: "A deep learning-powered gesture recognition system for autonomous vehicle interaction using TensorFlow.",
             tech: ["TensorFlow", "MediaPipe", "AI"],
             color: "from-violet-600 to-pink-600"
         }
     ];
 
     return (
-        <section id="projects" className="section-padding">
+        <section id="projects" className="py-20 md:py-32 px-6 sm:px-12 md:px-20">
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="Showcase">Project Highlights.</SectionTitle>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-16 md:mt-20">
                     {projects.map((proj, i) => (
                         <motion.div
                             key={proj.title}
-                            whileHover={{ y: -20 }}
-                            className="group glass-dark rounded-[3.5rem] overflow-hidden border border-white/5 relative cursor-pointer"
+                            whileHover={{ y: -15 }}
+                            className="group glass-dark rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-white/5 relative cursor-pointer"
                             onClick={() => proj.link && window.open(proj.link, '_blank')}
                         >
-                            <div className={`h-64 bg-gradient-to-br ${proj.color} p-12 flex flex-col justify-end relative overflow-hidden`}>
+                            <div className={`h-48 md:h-64 bg-gradient-to-br ${proj.color} p-8 md:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden`}>
                                 <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
-                                <h4 className="text-4xl font-black text-white tracking-tighter uppercase relative z-10">{proj.title}</h4>
+                                <h4 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase relative z-10 leading-tight text-center">{proj.title}</h4>
                             </div>
-                            <div className="p-10 space-y-6">
-                                <p className="text-zinc-400 font-light leading-relaxed">{proj.desc}</p>
+                            <div className="p-8 md:p-10 space-y-4 md:space-y-6">
+                                <p className="text-sm md:text-base text-zinc-400 font-light leading-relaxed">{proj.desc}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {proj.tech.map(t => (
-                                        <span key={t} className="px-3 py-1 glass text-[10px] font-mono text-zinc-300 rounded-lg">{t}</span>
+                                        <span key={t} className="px-2.5 py-1 glass text-[9px] md:text-[10px] font-mono text-zinc-300 rounded-lg">{t}</span>
                                     ))}
                                 </div>
                                 {proj.link && (
                                     <div className="pt-2">
-                                        <span className="text-white text-xs font-mono uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-colors">Visit Project →</span>
+                                        <span className="text-white text-[10px] md:text-xs font-mono uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-colors">Visit Project →</span>
                                     </div>
                                 )}
                             </div>
@@ -366,29 +366,29 @@ const ProjectsSection = () => {
 };
 
 const ContactSection = ({ onContactClick }: { onContactClick: () => void }) => (
-    <section id="contact" className="pt-20 pb-32 px-10 md:px-20 flex flex-col items-center text-center">
-        <div className="max-w-4xl glass-dark rounded-[4rem] pt-12 pb-16 md:pt-24 md:pb-32 px-10 md:px-32 relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 px-6 sm:px-12 md:px-20 flex flex-col items-center text-center">
+        <div className="max-w-4xl w-full glass-dark rounded-[2.5rem] md:rounded-[4rem] py-12 px-6 sm:px-12 md:py-24 md:px-32 relative overflow-hidden">
             <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-purple-600/10 blur-[120px] rounded-full" />
-            <SectionTitle subtitle="Connect">Start a Project.</SectionTitle>
-            <p className="text-3xl font-light text-zinc-400 mb-20 leading-snug">
+            <SectionTitle subtitle="Connect" headingSize="text-4xl md:text-6xl">Start a Project.</SectionTitle>
+            <p className="text-xl md:text-3xl font-light text-zinc-400 mb-12 md:mb-20 leading-snug">
                 Let's build something that <span className="text-white font-bold italic">shakes</span> the industry.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div className="space-y-2">
-                    <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Email</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 text-center lg:text-left">
+                <div className="space-y-3">
+                    <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest leading-none">Email</p>
                     <button
                         onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jeswinsam287@gmail.com', '_blank')}
-                        className="text-2xl font-black text-white hover:text-purple-400 transition-colors cursor-pointer block text-left"
+                        className="text-xl sm:text-2xl font-black text-white hover:text-purple-400 transition-colors cursor-pointer block w-full lg:text-left leading-tight break-all"
                     >
                         jeswinsam287@gmail.com
                     </button>
                 </div>
-                <div className="space-y-2">
-                    <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Phone</p>
+                <div className="space-y-3">
+                    <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest leading-none">Phone</p>
                     <a
                         href="tel:+918925091475"
-                        className="text-2xl font-black text-white hover:text-blue-400 transition-colors cursor-pointer block"
+                        className="text-xl sm:text-2xl font-black text-white hover:text-blue-400 transition-colors cursor-pointer block w-full lg:text-left leading-tight"
                     >
                         +91 8925091475
                     </a>
@@ -399,7 +399,7 @@ const ContactSection = ({ onContactClick }: { onContactClick: () => void }) => (
                 onClick={onContactClick}
                 whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(139, 92, 246, 0.3)' }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-20 w-full md:w-auto px-20 py-8 bg-white text-black font-black text-2xl rounded-[1.5rem] hover:bg-zinc-100 transition-all relative overflow-hidden group shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                className="mt-12 md:mt-20 w-full md:w-auto px-10 md:px-20 py-6 md:py-8 bg-white text-black font-black text-xl md:text-2xl rounded-[1.2rem] md:rounded-[1.5rem] transition-all relative overflow-hidden group shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             >
                 <span className="relative z-10">CONTACT ME NOW</span>
                 <motion.div
