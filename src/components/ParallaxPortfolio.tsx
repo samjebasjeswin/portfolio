@@ -12,7 +12,7 @@ import NewNavbar from './NewNavbar';
 /*                                COMPONENTS                                  */
 /* -------------------------------------------------------------------------- */
 
-const SectionTitle = ({ children, subtitle }: { children: React.ReactNode, subtitle?: string }) => (
+const SectionTitle = ({ children, subtitle, headingSize = "text-6xl md:text-8xl" }: { children: React.ReactNode, subtitle?: string, headingSize?: string }) => (
     <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const SectionTitle = ({ children, subtitle }: { children: React.ReactNode, subti
                 {subtitle}
             </motion.p>
         )}
-        <h2 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-6">
+        <h2 className={`${headingSize} font-black text-white tracking-tighter leading-none mb-6`}>
             {children}
         </h2>
         <motion.div
@@ -157,13 +157,21 @@ const AboutSection = () => (
                     className="object-cover object-top transition-all duration-1000 scale-100 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/20" />
-                <div className="absolute bottom-10 left-10 p-8 glass rounded-2xl backdrop-blur-2xl">
-                    <p className="text-white font-black text-4xl leading-tight">THE<br />VISIONARY.</p>
+                <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 p-8 glass rounded-[2rem] backdrop-blur-3xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] group-hover:border-purple-500/30 transition-all duration-700">
+                    <div className="relative">
+                        <div className="absolute -top-10 -left-6 w-16 h-16 bg-purple-600/10 blur-3xl rounded-full" />
+                        <div>
+                            <h3 className="text-white font-black text-2xl md:text-3xl tracking-tighter leading-[0.9]">
+                                THE<br />
+                                <span className="gradient-text">  FULL-STACK MIND.</span>
+                            </h3>
+                        </div>
+                    </div>
                 </div>
             </motion.div>
 
             <div className="space-y-12">
-                <SectionTitle subtitle="Introduction">The Architect.</SectionTitle>
+                <SectionTitle subtitle="Introduction" headingSize="text-4xl md:text-6xl">The<br />Digital Architect.</SectionTitle>
                 <div className="space-y-8">
                     <p className="text-3xl text-zinc-200 font-light leading-snug">
                         Building <span className="text-white font-bold border-b-2 border-purple-500">powerful Website</span> with a <span className="text-white font-bold border-b-2 border-blue-500">clean design</span>.
