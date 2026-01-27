@@ -74,7 +74,7 @@ const HeroSection = () => {
                     <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl font-light leading-relaxed">
                         Crafting digital universes with <span className="text-purple-400 font-medium">Next.js</span>,
                         architecting backends with <span className="text-blue-400 font-medium">Python</span>,
-                        and pushing boundaries with <span className="text-pink-400 font-medium">3D Experiences</span>.
+                        and exploring the frontier of <span className="text-pink-400 font-medium">AI & Computer Vision</span>.
                     </p>
                 </div>
 
@@ -176,8 +176,8 @@ const AboutSection = () => (
                 <div className="flex gap-6">
                     <div className="px-10 py-6 glass rounded-3xl group hover:border-purple-500/50 transition-all">
                         <p className="text-slate-500 text-xs font-mono uppercase mb-2">Experience</p>
-                        <p className="text-white font-black text-4xl group-hover:translate-x-2 transition-transform">3<span className="text-purple-500 text-2xl">+</span></p>
-                        <p className="text-slate-400 text-sm">Months Pro</p>
+                        <p className="text-white font-black text-4xl group-hover:translate-x-2 transition-transform">1<span className="text-purple-500 text-2xl">+</span></p>
+                        <p className="text-slate-400 text-sm">Year Experience</p>
                     </div>
                     <div className="px-10 py-6 glass rounded-3xl group hover:border-blue-500/50 transition-all">
                         <p className="text-slate-500 text-xs font-mono uppercase mb-2">Projects</p>
@@ -193,15 +193,16 @@ const AboutSection = () => (
 const SkillsSection = () => {
     const categories = [
         { title: "Frontend", skills: ["Next.js", "React.js", "HTML", "CSS", "Javascript", "TailwindCSS"], color: "from-purple-500 to-indigo-600" },
-        { title: "Backend", skills: ["Python", "PHP", "MySQL", "REST & GraphQL APIs", "PostgreSQL"], color: "from-blue-500 to-cyan-500" },
-        { title: "Tools", skills: ["Git", "GitHub", "VS Code", "Postman", "Browser DevTools (Chrome / Edge DevTools)"], color: "from-pink-500 to-rose-500" }
+        { title: "Backend", skills: ["Python", "PHP", "MySQL", "PostgreSQL", "REST & GraphQL"], color: "from-blue-500 to-cyan-500" },
+        { title: "AI & CV", skills: ["OpenCV", "TensorFlow", "MediaPipe", "Tesseract", "Pandas"], color: "from-emerald-500 to-teal-500" },
+        { title: "Tools", skills: ["Git", "GitHub", "VS Code", "Postman", "DevTools"], color: "from-pink-500 to-rose-500" }
     ];
 
     return (
         <section id="skills" className="w-full min-h-screen py-32 px-10 md:px-20 relative">
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="Expertise">Technical Stack.</SectionTitle>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-20">
                     {categories.map((cat, i) => (
                         <motion.div
                             key={cat.title}
@@ -231,15 +232,21 @@ const ExperienceSection = () => {
     const experiences = [
         {
             company: "SVR GLOBAL SOLUTIONS INDIA",
-            role: "WordPress & Next.js Full-stack Developer",
-            period: "2024 - PRESENT",
-            desc: "Architecting high-performance web applications. Engineered custom solutions and optimized backend efficiency for large-scale industrial platforms across the globe."
+            role: "WordPress & Full-stack Developer",
+            period: "OCT 2025 - PRESENT",
+            desc: "Began as a Developer Trainee in October 2025 and transitioned to Full-time status in January 2026. Delivering full-stack solutions with Next.js, GraphQL, MySQL, and REST APIs for industrial-grade platforms."
         },
         {
-            company: "WORKCOHOL",
-            role: "WordPress Developer Intern",
+            company: "WORKCOHOL | CHENNAI",
+            role: "Software Engineer Intern",
             period: "JAN 2025 - MAR 2025",
-            desc: "Architecting high-performance web applications using the Python/React stack. Improving core metrics and shipping production-ready code in an agile loop."
+            desc: "Contributed to real-world projects using Python, Django, MySQL, and React.js. Focused on creating RESTful APIs, database integration, and performance optimization within an agile team environment."
+        },
+        {
+            company: "LIVE STREAM TECHNOLOGIES | COIMBATORE",
+            role: "Web Development Intern",
+            period: "JUNE 2022 - JULY 2022",
+            desc: "Gained hands-on experience in web development using HTML, CSS, Python, and MySQL. Developed responsive pages and worked on Python-based backend development, including REST APIs and user authentication."
         }
     ];
 
@@ -273,27 +280,27 @@ const ExperienceSection = () => {
 const ProjectsSection = () => {
     const projects = [
         {
-            title: "Visionary AI E-commerce",
+            title: "Visionary E-commerce",
             desc: "A Next.js full-stack platform revolutionizing shopping with 3D interfaces and AI-driven personalization for SVR Global.",
             tech: ["Next.js", "Three.js", "AI", "TailwindCSS"],
             color: "from-indigo-600 to-purple-600"
         },
         {
-            title: "African Valve Global",
+            title: "African Valve ",
             desc: "Architected a high-performance industrial ecosystem. Integrated Next.js frontend with WordPress via GraphQL for full-stack data flow.",
             tech: ["Next.js", "GraphQL", "WordPress"],
             color: "from-blue-600 to-cyan-500",
             link: "https://www.africanvalve.com/"
         },
         {
-            title: "Speciality Valve Engineering",
+            title: "Speciality Valve",
             desc: "Engineered complex backend logic and custom UI components using PHP and CSS for a major industrial manufacturer.",
             tech: ["PHP", "CSS", "WordPress"],
             color: "from-purple-600 to-indigo-600",
             link: "https://www.specialityvalve.com/"
         },
         {
-            title: "UAE Valve Solutions",
+            title: "UAE Valve",
             desc: "Developed a mission-critical regional platform optimized for performance and high-ranking search visibility.",
             tech: ["WordPress", "SEO", "Performance"],
             color: "from-red-600 to-rose-600",
@@ -301,13 +308,13 @@ const ProjectsSection = () => {
         },
         {
             title: "ANPR Traffic Intelligence",
-            desc: "Advanced license plate recognition system utilizing Computer Vision and Tesseract for real-time data retrieval.",
+            desc: "An advanced license plate recognition system utilizing Computer Vision and Tesseract for real-time data retrieval. Developed as a College Mini Project.",
             tech: ["Python", "OpenCV", "Tesseract", "Pandas"],
             color: "from-emerald-600 to-teal-500"
         },
         {
-            title: "Autonomous Signal Recognition",
-            desc: "Deep learning system for gesture recognition, enabling autonomous vehicle interaction via TensorFlow.",
+            title: "Autonomous Signal Gesture Recognition",
+            desc: "A deep learning-powered gesture recognition system for autonomous vehicle interaction. Developed as a Final Year Project using TensorFlow.",
             tech: ["TensorFlow", "MediaPipe", "AI"],
             color: "from-violet-600 to-pink-600"
         }
@@ -316,7 +323,7 @@ const ProjectsSection = () => {
     return (
         <section id="projects" className="section-padding">
             <div className="max-w-7xl mx-auto">
-                <SectionTitle subtitle="Showcase">Recent Work.</SectionTitle>
+                <SectionTitle subtitle="Showcase">Project Highlights.</SectionTitle>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
                     {projects.map((proj, i) => (
                         <motion.div
@@ -350,7 +357,7 @@ const ProjectsSection = () => {
     );
 };
 
-const ContactSection = () => (
+const ContactSection = ({ onContactClick }: { onContactClick: () => void }) => (
     <section id="contact" className="section-padding flex flex-col items-center text-center">
         <div className="max-w-4xl glass-dark rounded-[4rem] p-16 md:p-32 relative overflow-hidden">
             <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-purple-600/10 blur-[120px] rounded-full" />
@@ -362,15 +369,26 @@ const ContactSection = () => (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                 <div className="space-y-2">
                     <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Email</p>
-                    <p className="text-2xl font-black text-white hover:text-purple-400 transition-colors cursor-pointer">jeswinsam287@gmail.com</p>
+                    <button
+                        onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jeswinsam287@gmail.com', '_blank')}
+                        className="text-2xl font-black text-white hover:text-purple-400 transition-colors cursor-pointer block text-left"
+                    >
+                        jeswinsam287@gmail.com
+                    </button>
                 </div>
                 <div className="space-y-2">
                     <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Phone</p>
-                    <p className="text-2xl font-black text-white">+91 8925091475</p>
+                    <a
+                        href="tel:+918925091475"
+                        className="text-2xl font-black text-white hover:text-blue-400 transition-colors cursor-pointer block"
+                    >
+                        +91 8925091475
+                    </a>
                 </div>
             </div>
 
             <motion.button
+                onClick={onContactClick}
                 whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(139, 92, 246, 0.3)' }}
                 whileTap={{ scale: 0.98 }}
                 className="mt-20 w-full md:w-auto px-20 py-8 bg-white text-black font-black text-2xl rounded-[1.5rem] hover:bg-zinc-100 transition-all relative overflow-hidden group shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
@@ -383,6 +401,168 @@ const ContactSection = () => (
         </div>
     </section>
 );
+
+const ContactModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSending(true);
+
+        try {
+            // Using Web3Forms - A professional, no-backend email service
+            // You can get your own Access Key for free at: https://web3forms.com/
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    subject: `New Portfolio Message from ${formData.name}`,
+                    from_name: "Portfolio Contact Form",
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setIsSubmitted(true);
+                setTimeout(() => {
+                    setIsSubmitted(false);
+                    onClose();
+                }, 3000);
+            } else {
+                alert("Something went wrong. Please try again or use the direct mail link.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Error sending message. Please check your connection.");
+        } finally {
+            setIsSending(false);
+        }
+    };
+
+    return (
+        <AnimatePresence>
+            {isOpen && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={onClose}
+                        className="absolute inset-0 bg-zinc-950/80 backdrop-blur-md"
+                    />
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                        className="relative w-full max-w-2xl glass-dark rounded-[3rem] p-12 overflow-hidden shadow-2xl border border-white/10"
+                    >
+                        <button onClick={onClose} className="absolute top-8 right-8 text-zinc-500 hover:text-white transition-colors">
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+
+                        <AnimatePresence mode="wait">
+                            {!isSubmitted ? (
+                                <motion.div
+                                    key="form"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: 20 }}
+                                >
+                                    <h3 className="text-5xl font-black text-white mb-2 tracking-tighter">LET'S TALK.</h3>
+                                    <p className="text-zinc-400 mb-10 font-light">Tell me about your vision.</p>
+
+                                    <form onSubmit={handleSubmit} className="space-y-6">
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-mono text-zinc-500 uppercase tracking-widest pl-2">Name</label>
+                                            <input
+                                                required
+                                                type="text"
+                                                name="name"
+                                                placeholder="Enter your name"
+                                                className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-white outline-none focus:ring-2 ring-purple-500/50 transition-all"
+                                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                            />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-mono text-zinc-500 uppercase tracking-widest pl-2">Email</label>
+                                            <input
+                                                required
+                                                type="email"
+                                                name="email"
+                                                placeholder="Enter your email"
+                                                className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-white outline-none focus:ring-2 ring-purple-500/50 transition-all"
+                                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                            />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-mono text-zinc-500 uppercase tracking-widest pl-2">Message</label>
+                                            <textarea
+                                                required
+                                                name="message"
+                                                rows={4}
+                                                placeholder="Tell me about your project..."
+                                                className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-white outline-none focus:ring-2 ring-purple-500/50 transition-all resize-none"
+                                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                            />
+                                        </div>
+
+                                        <div className="pt-4">
+                                            <motion.button
+                                                disabled={isSending}
+                                                whileHover={{ scale: 1.02 }}
+                                                whileTap={{ scale: 0.98 }}
+                                                type="submit"
+                                                className={`w-full p-8 bg-white text-black font-black rounded-2xl transition-all uppercase tracking-[0.2em] text-lg shadow-xl ${isSending ? 'opacity-50 cursor-not-allowed' : 'hover:bg-zinc-100'}`}
+                                            >
+                                                {isSending ? 'SENDING...' : 'SUBMIT'}
+                                            </motion.button>
+                                        </div>
+                                    </form>
+                                </motion.div>
+                            ) : (
+                                <motion.div
+                                    key="success"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="flex flex-col items-center justify-center py-20 text-center"
+                                >
+                                    <div className="w-24 h-24 bg-green-500/20 rounded-full flex items-center justify-center mb-8 border border-green-500/30">
+                                        <motion.svg
+                                            initial={{ pathLength: 0 }}
+                                            animate={{ pathLength: 1 }}
+                                            transition={{ duration: 0.5, delay: 0.2 }}
+                                            className="w-12 h-12 text-green-500"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                                        </motion.svg>
+                                    </div>
+                                    <h3 className="text-5xl font-black text-white mb-4 tracking-tighter uppercase">Success!</h3>
+                                    <p className="text-zinc-400 text-xl font-light">
+                                        Your message has been sent directly to Sam.<br />
+                                        I'll get back to you shortly!
+                                    </p>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </motion.div>
+                </div>
+            )}
+        </AnimatePresence>
+    );
+};
 
 /* -------------------------------------------------------------------------- */
 /*                                3D SCENE                                    */
@@ -451,6 +631,7 @@ function Scene3D({ scrollProgress }: { scrollProgress: number }) {
 
 export default function ParallaxPortfolio() {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [isContactOpen, setIsContactOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -467,7 +648,7 @@ export default function ParallaxPortfolio() {
 
     return (
         <div className="w-full relative bg-zinc-950 font-sans selection:bg-purple-500/40 overflow-x-hidden">
-            <NewNavbar />
+            <NewNavbar onContactClick={() => setIsContactOpen(true)} />
 
             {/* 3D Background */}
             <div className="fixed inset-0 z-0 pointer-events-none opacity-60">
@@ -488,11 +669,13 @@ export default function ParallaxPortfolio() {
                 <SkillsSection />
                 <ProjectsSection />
                 <ExperienceSection />
-                <ContactSection />
+                <ContactSection onContactClick={() => setIsContactOpen(true)} />
             </div>
 
+            <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+
             <footer className="section-padding text-center text-zinc-700 text-xs font-mono uppercase tracking-[0.5em] border-t border-white/5 relative z-10 bg-zinc-950/80 backdrop-blur-xl">
-                © 2025 SAMJEBAS. <span className="text-purple-500/50">Engineered with Passion.</span>
+                © 2026 SAMJEBAS. <span className="text-purple-500/50">Engineered with Passion.</span>
             </footer>
         </div>
     );
