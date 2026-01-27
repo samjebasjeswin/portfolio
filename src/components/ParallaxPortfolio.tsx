@@ -60,9 +60,9 @@ const HeroSection = () => {
                         animate={{ opacity: 0.05 }}
                         className="absolute -top-8 md:-top-12 -left-4 md:-left-8 text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] font-black text-white pointer-events-none select-none whitespace-nowrap"
                     >
-
+                        SAMJEBAS
                     </motion.span>
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-black gradient-text tracking-tighter leading-[0.9] md:leading-[0.8] relative z-10 drop-shadow-2xl pr-4">
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-black gradient-text tracking-tighter leading-[0.85] md:leading-[0.8] relative z-10 drop-shadow-2xl pr-4">
                         SAMJEBAS<br />JESWIN K
                     </h1>
                 </div>
@@ -342,7 +342,7 @@ const ProjectsSection = () => {
                         >
                             <div className={`h-48 md:h-64 bg-gradient-to-br ${proj.color} p-8 md:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden`}>
                                 <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20" />
-                                <h4 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase relative z-10 leading-tight">{proj.title}</h4>
+                                <h4 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase relative z-10 leading-tight text-center">{proj.title}</h4>
                             </div>
                             <div className="p-8 md:p-10 space-y-4 md:space-y-6">
                                 <p className="text-sm md:text-base text-zinc-400 font-light leading-relaxed">{proj.desc}</p>
