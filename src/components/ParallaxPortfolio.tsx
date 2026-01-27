@@ -277,31 +277,27 @@ const ProjectsSection = () => {
             desc: "Full-stack E-commerce platform. Built the Next.js frontend and integrated it with a WordPress backend using GraphQL.",
             tech: ["Next.js", "GraphQL", "WordPress"],
             color: "from-blue-600 to-indigo-600",
-            link: "https://www.africanvalve.com/shop/"
+            link: "https://www.africanvalve.com/"
         },
         {
             title: "Speciality Valves",
             desc: "Improved the design and backend logic using CSS and PHP to enhance a large-scale industrial site.",
             tech: ["PHP", "CSS", "WordPress"],
-            color: "from-purple-600 to-blue-600"
-        },
-        {
-            title: "Valves Only",
-            desc: "Developed a custom industrial platform focused on specialized valve supply and distribution.",
-            tech: ["WordPress", "PHP", "UI/UX"],
-            color: "from-zinc-800 to-zinc-950"
+            color: "from-purple-600 to-blue-600",
+            link: "https://www.specialityvalve.com/"
         },
         {
             title: "UAE Valve",
             desc: "Built a high-performance regional platform specifically for the Middle Eastern industrial market.",
             tech: ["WordPress", "SEO", "Performance"],
-            color: "from-red-600 to-orange-600"
+            color: "from-red-600 to-orange-600",
+            link: "https://www.uaevalves.com/"
         },
         {
             title: "Auto OCR",
-            desc: "An AI system that automatically reads license plates using Python and Computer Vision.",
-            tech: ["Python", "OpenCV", "AI"],
-            color: "from-cyan-600 to-blue-500"
+            desc: "ANPR system that detects license plates and retrieves vehicle owner details from an RTO database using Computer Vision and OCR.",
+            tech: ["Python", "OpenCV", "Tesseract", "Pandas"],
+            color: "from-emerald-600 to-teal-500"
         },
         {
             title: "Traffic AI",
