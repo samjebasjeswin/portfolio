@@ -273,37 +273,43 @@ const ExperienceSection = () => {
 const ProjectsSection = () => {
     const projects = [
         {
-            title: "African Valve",
-            desc: "Full-stack E-commerce platform. Built the Next.js frontend and integrated it with a WordPress backend using GraphQL.",
+            title: "Visionary AI E-commerce",
+            desc: "A Next.js full-stack platform revolutionizing shopping with 3D interfaces and AI-driven personalization for SVR Global.",
+            tech: ["Next.js", "Three.js", "AI", "TailwindCSS"],
+            color: "from-indigo-600 to-purple-600"
+        },
+        {
+            title: "African Valve Global",
+            desc: "Architected a high-performance industrial ecosystem. Integrated Next.js frontend with WordPress via GraphQL for full-stack data flow.",
             tech: ["Next.js", "GraphQL", "WordPress"],
-            color: "from-blue-600 to-indigo-600",
+            color: "from-blue-600 to-cyan-500",
             link: "https://www.africanvalve.com/"
         },
         {
-            title: "Speciality Valves",
-            desc: "Improved the design and backend logic using CSS and PHP to enhance a large-scale industrial site.",
+            title: "Speciality Valve Engineering",
+            desc: "Engineered complex backend logic and custom UI components using PHP and CSS for a major industrial manufacturer.",
             tech: ["PHP", "CSS", "WordPress"],
-            color: "from-purple-600 to-blue-600",
+            color: "from-purple-600 to-indigo-600",
             link: "https://www.specialityvalve.com/"
         },
         {
-            title: "UAE Valve",
-            desc: "Built a high-performance regional platform specifically for the Middle Eastern industrial market.",
+            title: "UAE Valve Solutions",
+            desc: "Developed a mission-critical regional platform optimized for performance and high-ranking search visibility.",
             tech: ["WordPress", "SEO", "Performance"],
-            color: "from-red-600 to-orange-600",
+            color: "from-red-600 to-rose-600",
             link: "https://www.uaevalves.com/"
         },
         {
-            title: "Auto OCR",
-            desc: "ANPR system that detects license plates and retrieves vehicle owner details from an RTO database using Computer Vision and OCR.",
+            title: "ANPR Traffic Intelligence",
+            desc: "Advanced license plate recognition system utilizing Computer Vision and Tesseract for real-time data retrieval.",
             tech: ["Python", "OpenCV", "Tesseract", "Pandas"],
             color: "from-emerald-600 to-teal-500"
         },
         {
-            title: "Traffic AI",
-            desc: "A gesture recognition system that helps autonomous vehicles react to human hand signals.",
-            tech: ["TensorFlow", "MediaPipe"],
-            color: "from-purple-600 to-pink-600"
+            title: "Autonomous Signal Recognition",
+            desc: "Deep learning system for gesture recognition, enabling autonomous vehicle interaction via TensorFlow.",
+            tech: ["TensorFlow", "MediaPipe", "AI"],
+            color: "from-violet-600 to-pink-600"
         }
     ];
 
