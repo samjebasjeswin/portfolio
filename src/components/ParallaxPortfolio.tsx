@@ -358,8 +358,8 @@ const ProjectsSection = () => {
 };
 
 const ContactSection = ({ onContactClick }: { onContactClick: () => void }) => (
-    <section id="contact" className="section-padding flex flex-col items-center text-center">
-        <div className="max-w-4xl glass-dark rounded-[4rem] p-16 md:p-32 relative overflow-hidden">
+    <section id="contact" className="pt-20 pb-32 px-10 md:px-20 flex flex-col items-center text-center">
+        <div className="max-w-4xl glass-dark rounded-[4rem] pt-12 pb-16 md:pt-24 md:pb-32 px-10 md:px-32 relative overflow-hidden">
             <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-purple-600/10 blur-[120px] rounded-full" />
             <SectionTitle subtitle="Connect">Start a Project.</SectionTitle>
             <p className="text-3xl font-light text-zinc-400 mb-20 leading-snug">
