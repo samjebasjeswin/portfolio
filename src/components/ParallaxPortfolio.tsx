@@ -69,7 +69,7 @@ const HeroSection = () => {
 
                 <div className="mt-12 space-y-4">
                     <h2 className="text-4xl md:text-6xl font-extralight text-white tracking-[0.3em] opacity-80 uppercase">
-                        WordPress Developer
+                        WordPress & Full-stack Developer
                     </h2>
                     <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl font-light leading-relaxed">
                         Crafting digital universes with <span className="text-purple-400 font-medium">Next.js</span>,
@@ -166,10 +166,10 @@ const AboutSection = () => (
                 <SectionTitle subtitle="Introduction">The Architect.</SectionTitle>
                 <div className="space-y-8">
                     <p className="text-3xl text-zinc-200 font-light leading-snug">
-                        Bridging the gap between <span className="text-white font-bold border-b-2 border-purple-500">raw power</span> and <span className="text-white font-bold border-b-2 border-blue-500">liquid design</span>.
+                        Building <span className="text-white font-bold border-b-2 border-purple-500">powerful apps</span> with a <span className="text-white font-bold border-b-2 border-blue-500">clean design</span>.
                     </p>
                     <p className="text-xl text-zinc-400 font-light leading-relaxed">
-                        As a Full-time WordPress Developer at <span className="text-white font-medium">SVR GLOBAL SOLUTIONS INDIA</span>, I don't just write code; I craft digital ecosystems. My background in B.Tech CSE allows me to handle complex backend logic while my passion for UI/UX ensures every pixel has a purpose.
+                        I'm a WordPress Developer at <span className="text-white font-medium">SVR GLOBAL SOLUTIONS INDIA</span> specializing in Full-stack <span className="text-purple-400">Next.js</span> development. I enjoy building everything from user interfaces to backend systems.
                     </p>
                 </div>
 
@@ -181,7 +181,7 @@ const AboutSection = () => (
                     </div>
                     <div className="px-10 py-6 glass rounded-3xl group hover:border-blue-500/50 transition-all">
                         <p className="text-slate-500 text-xs font-mono uppercase mb-2">Projects</p>
-                        <p className="text-white font-black text-4xl group-hover:translate-x-2 transition-transform">20<span className="text-blue-500 text-2xl">+</span></p>
+                        <p className="text-white font-black text-4xl group-hover:translate-x-2 transition-transform">7<span className="text-blue-500 text-2xl">+</span></p>
                         <p className="text-slate-400 text-sm">Deployed</p>
                     </div>
                 </div>
@@ -231,7 +231,7 @@ const ExperienceSection = () => {
     const experiences = [
         {
             company: "SVR GLOBAL SOLUTIONS INDIA",
-            role: "Full-time WordPress Developer",
+            role: "WordPress & Next.js Full-stack Developer",
             period: "2024 - PRESENT",
             desc: "Architecting high-performance web applications. Engineered custom solutions and optimized backend efficiency for large-scale industrial platforms across the globe."
         },
