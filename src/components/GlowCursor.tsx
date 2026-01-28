@@ -6,6 +6,7 @@ import { motion, useSpring, useMotionValue } from 'framer-motion';
 export default function GlowCursor() {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
+    const [isVisible, setIsVisible] = useState(false);
 
     // Smooth out the movement
     const springConfig = { damping: 25, stiffness: 150 };
@@ -13,6 +14,13 @@ export default function GlowCursor() {
     const y = useSpring(mouseY, springConfig);
 
     useEffect(() => {
+        // Disable on mobile/touch devices
+        if (window.matchMedia("(pointer: coarse)").matches) {
+            setIsVisible(false);
+            return;
+        }
+        setIsVisible(true);
+
         const handleMouseMove = (e: MouseEvent) => {
             mouseX.set(e.clientX);
             mouseY.set(e.clientY);
@@ -21,6 +29,8 @@ export default function GlowCursor() {
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, [mouseX, mouseY]);
+
+    if (!isVisible) return null;
 
     return (
         <motion.div
