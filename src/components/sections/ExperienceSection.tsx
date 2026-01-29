@@ -17,6 +17,12 @@ const experiences = [
         desc: "Contributed to real-world projects using Python, Django, MySQL, and React.js. Focused on creating RESTful APIs, database integration, and performance optimization within an agile team environment."
     },
     {
+        company: "MEITHIRAN LEARNING COMMUNITY",
+        role: "WordPress Developer Trainee",
+        period: "AUG 18 2024 - OCT 9 2024",
+        desc: "Completed an immersive simulation of the professional software development lifecycle. Mastered Git Flow and Agile Scrum methodologies, developing best practices for sprint ceremonies and daily stand-ups. Learned to effectively collaborate with QA engineers and Business Analysts (BAs) to align code with client requirements. Technical training included rigorous sessions on WordPress theme development, API integration, and Next.js concepts."
+    },
+    {
         company: "LIVE STREAM TECHNOLOGIES | COIMBATORE",
         role: "Web Development Intern",
         period: "JUNE 2022 - JULY 2022",
